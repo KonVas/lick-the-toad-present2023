@@ -1,0 +1,161 @@
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\makeatletter
+\newcommand{\citeprocitem}[2]{\hyper@linkstart{cite}{citeproc_bib_item_#1}#2\hyper@linkend}
+\makeatother
+\author{Konstantinos Vasilakos}
+\date{\today}
+\title{Lick the Toad\\\medskip
+\large A web based interface for displaced agencies in musical interaction}
+\hypersetup{
+ pdfauthor={Konstantinos Vasilakos},
+ pdftitle={Lick the Toad},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.6)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+
+
+\section*{Introduction}
+\label{sec:org674f903}
+\section*{Lick the Toad}
+\label{sec:orgda53d64}
+Ltt is a web interface designed for bridging the gap between performer(s) and audience, allowing former and latter to engage interactively.
+
+\section*{Bridging the audience agency in musical interaction}
+\label{sec:orge486533}
+It allows for real time of data interaction between clients and server offering an ideal tool to share data for musical interpretation on the fly.
+\subsection*{Back to the parlour}
+\label{sec:orgfb38a5d}
+\begin{quote}
+\ldots{} as the schism between ‘popular’ and ‘art’ deepened, and
+the latter demanded increasing levels of virtuosity in order
+to realise musical ideas, performance of certain strands of
+contemporary music became nearly impossible for anyone
+but professionals; disappearing from the ‘soiree’ repertoire.
+\end{quote}
+
+\emph{Fischman, R. (2011). Back to the parlour. Sonic Ideas – Ideas Sónicas, 3(2): 53–66.}
+\subsection*{Some implementation notes:}
+\label{sec:org6d0662a}
+\begin{enumerate}
+\item Real time communication using web sockets\footnote{Web sockets is a real time communication mechanism that allow web pages to send and receive data amongst peers.
+
+\label{bibliographystyle link}
+\bibliographystyle{unsrtnat}
+
+\label{bibliography link}}
+\item Sonifications on users' devices.
+\item OSC communication with: MaxMSP, SuperCollider, Pure Data, etc.
+\end{enumerate}
+
+\section*{Background}
+\label{sec:org6619394}
+\begin{center}
+\includegraphics[width=.9\linewidth]{/Users/konstantinos/.emacs.d/.local/cache/org/persist/ec/6de2c0-fc8e-432e-b79d-c9d8965e7d45-7f1010a6ca72c3902a58faa6f9ff74b9.jpg}
+\end{center}
+
+\subsection*{Looking Back}
+\label{sec:org5f416d2}
+“The Art of and Apparatus for Generating and Distributing Music Electrically”.\footnote{A \href{https://120years.net/wordpress/the-telharmonium-thaddeus-cahill-usa-1897/}{new field of electronic musical instruments} and \href{https://artsandculture.google.com/story/iAWRKDY1jD1jKA}{electronic musical instruments creation using telegraphy}.} \ref{Table_Crab_Telharmonium}
+\begin{table}[htbp]
+\label{Table_Crab_Telharmonium}
+\centering
+\begin{tabular}{llr}
+Name & Instrument & Year\\\empty
+\hline
+Puskás & Telefonhírmondó & 1893\\\empty
+Cahill & Telharmonium & 1895/97\\\empty
+Gray & Musical Telegraph & 1874\\\empty
+Ader & Théâtrophone & 1881\\\empty
+Soemering & n/a & 1809\\\empty
+\end{tabular}
+\end{table}
+
+\emph{Crab, S. (2013). The ‘Telharmonium’ or ‘Dynamophone’ Thaddeus Cahill, USA 1897.}
+
+\begin{NOTES}
+In 1895 Thaddeus Cahill submitted his first patent for the Telharmonium
+By Unknown author - The World's Work, June 1906, vol. XII, no. II, Public Domain, \url{https://commons.wikimedia.org/w/index.php?curid=112285881}
+\end{NOTES}
+
+\subsection*{Looking Forward}
+\label{sec:orgf38e5a6}
+Modern takes using telecom: the networked music paradigm \emph{Collins, N., \& Escrivan Rincón, J. d. (2011). The Cambridge companion to electronic music. Cambridge: Cambridge University Press.}
+
+Previous works by the author in this field:
+\begin{itemize}
+\item \href{https://serkansevilgen.com/docs/01\_ICLC\_2021\_Sevilgen\_Vasilakos\_Wilson.pdf}{BEER Pea Stew: Recalibrated} (Wilson, Vasilakos, Lorway, Margetson, Yeung).
+\item \href{https://serkansevilgen.com/docs/01\_ICLC\_2021\_Sevilgen\_Vasilakos\_Wilson.pdf}{ICE: Symphony in Blue 2.0} \textbf{based on Kamran Ince's initial work} (Vasilakos, Sevilgen, Dagdeviren, Wilson)
+\end{itemize}
+
+\section*{Ltt: machine Learning in the browser}
+\label{sec:orga8d0465}
+\subsection*{Client Collection Data}
+\label{sec:org006e1b7}
+A client allows to train a model in a web browser and triger predictions based on a regression algorithm. Once the training process is done the system offers visualization of the output values. The sound generation is based on a Markov chain module which is generating predictions based on the ml predictions. At the same time the client is able to send these data to other clients ``listening''  for incoming OSC messages.
+\subsection*{Notes on ML in Computer Music and Digital Arts}
+\label{sec:org1672f84}
+For some machine learning in Electronic Music literature as follows:
+\begin{itemize}
+\item Vasilakos, K. (2022). A Networked Hybrid Interface for Audience Sonification and Machine Learning. Revista Vórtex, 10(1) \url{http://dx.doi.org/10.33871/23179937.2022.10.1.4695}
+\item Collins, N. (2015). Live Coding and Machine Listening. In Proceedings of the First International Conference on Live Coding (pp. 8). Leeds, UK.
+\item Fiebrink, R., \& Sonami, L. (2020). Reflections on Eight Years of Instrument Creation with Machine Learning. In R. Michon, \& F. Schroeder, Proceedings of the International Conference on New Interfaces for Musical Expression (pp. 282–288). Birmingham, UK: Birmingham City University.
+\item Baalman, M. (2020). The machine is learning.
+\item Amershi, S., Cakmak, M., Knox, W. B., \& Kulesza, T. (2014). Power to the People: The Role of Humans in Interactive Machine Learning. AI Magazine, 35(4), 105–120. \url{http://dx.doi.org/10.1609/aimag.v35i4.2513}
+\end{itemize}
+
+\section*{Ltt's creative directions}
+\label{sec:org9aef2df}
+\begin{NOTES}
+Ltt has been used as a standalone app for collective sonifications of bystanders and remote participants but since then it has taken many spins including a real time chat engine amongst peers.
+\end{NOTES}
+
+\subsection*{Live Coding: what now?}
+\label{sec:org5e6861f}
+In live coding performances, there is always the question of how a coder is taking their decisions while changing the code on the fly, described also as ``kairotic coding''. \emph{Cocker, E. (2018). What now, what next — kairotic coding and the unfolding future seized. Digital Creativity, 29(1), 82–95. \url{http://dx.doi.org/10.1080/14626268.2017.1419978}}
+
+\subsubsection*{Ongoing Work}
+\label{sec:org41313e7}
+A study on live coding using ltt and stochastic processes\footnote{Stochastic synthesis is coined by Iannis Xenakis, with some of the most famous works Legend Air and Gendy system.} in SuperCollider's JITLib.
+\begin{verbatim}
+{
+	[nil].choose;
+}
+\end{verbatim}
+
+\href{https://youtube.com/watch?v=IrGk0yrfbOY}{[nil]​}
+
+\section*{Discussion (instead of) Conclusion}
+\label{sec:orgad60544}
+While ltt serves both as a standalone and live coding tool, it arguably allows for a greater coherence amongst peers on live performance. Similar to the concept of ``back to the parlour'' where members of the audience are able to enact an impromptu improvisation.
+
+\section*{Thanks}
+\label{sec:org96c2b98}
+Courtesy to the majestic Org mode
+\begin{center}
+\includesvg[width=.9\linewidth]{/Users/konstantinos/.emacs.d/.local/cache/org/persist/60/c86ac0-aa70-4345-b2b7-a3aa1b592a75-b12c0615bd9cca27d21e0c1e4079751a}
+\end{center}
+
+\ldots{}and the powerful SuperCollider
+\begin{center}
+\includesvg[width=.9\linewidth]{/Users/konstantinos/.emacs.d/.local/cache/org/persist/82/a01565-1a8b-4360-a7a0-fe1130d7d9bf-d3955a7c00c4fd105e49e34b7c2707cf}
+\end{center}
+\end{document}
