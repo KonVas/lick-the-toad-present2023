@@ -35,7 +35,7 @@ https://upload.wikimedia.org/wikipedia/commons/0/00/Telharmonium_-_Scientific_Am
 [[https://commons.wikimedia.org/w/index.php?curid=112285881/][Unknown author - The World's Work, June 1906, vol. XII, no. II, Public Domain]]
 
 #+BEGIN_NOTES
-To understand networked music system first a paraller maybe drawned with other examples of primitive distributed systems in music making. In 1895 Thaddeus Cahill submitted his first patent for the Telharmonium, influenced by other similar creations of the time in Europe and beyond. What was common ground for these all was the idea of using modern available tellecommunications, to distribute live music electrically and most important, remotely, displaced from the actual site of the music performance. Therefore, modern technology apparatus and implicit networking was always in the forefront of pioneering music.
+To understand networked music system first a paraller maybe drawn with other examples of primitive distributed systems in music making. In 1895 Thaddeus Cahill submitted his first patent for the Telharmonium, influenced by other similar creations of the time in Europe and beyond. What was common ground for these all was the idea of using modern available tellecommunications, to distribute live music electrically and most important, remotely, displaced from the actual site of the music performance. Therefore, modern technology apparatus and implicit networking was always in the forefront of pioneering music.
 #+END_NOTES
 
 ** Influences
