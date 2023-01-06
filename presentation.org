@@ -103,7 +103,7 @@ https://upload.wikimedia.org/wikipedia/commons/6/60/SuperCollider_logo.svg
 
 * Footnotes
 [fn:3] A [[https://120years.net/wordpress/the-telharmonium-thaddeus-cahill-usa-1897/][new field of electronic musical instruments]] and [[https://artsandculture.google.com/story/iAWRKDY1jD1jKA][electronic musical instruments creation using telegraphy]].
-[fn:2] Stochastic synthesis is coined by Iannis Xenakis, with some of the most famous works Legend Air and Gendy system.
+[fn:2] Stochastic synthesis is coined by Iannis Xenakis, with some of the most famous works [[https://www.youtube.com/watch?v=TNWFITZrvxo&ab_channel=TheHouseofHiddenKnowledge][La Légende d'Eer (1977/78)]] and Gendy system.
 [fn:1] Web sockets is a real time communication mechanism that allow web pages to send and receive data amongst peers.
 
 * Bibliography
