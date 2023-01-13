@@ -1,0 +1,8 @@
+#+title: Test
+
+* hello
+this[[cite:&ogborn_extramuros_2015]]
+
+* Bibliography
+printbibliography:./bibliography.bib
+printbibliography:references.bib

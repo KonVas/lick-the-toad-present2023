@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.3)  7 JAN 2023 18:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.3)  6 JAN 2023 14:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**presentation.tex
-(.//presentation.tex
+**/Users/konstantinos/Documents/lick-the-toad-present2023/.tex
+(/Users/konstantinos/Documents/lick-the-toad-present2023/.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06>
 (/usr/local/texlive/2020basic/texmf-dist/tex/latex/base/article.cls
@@ -83,17 +83,17 @@ Enter file name:
 ! Emergency stop.
 <read *> 
          
-l.8 \usepackage
+l.9 \usepackage
                {rotating}^^M
 *** (cannot \read from terminal in nonstop modes)
 
  
 Here is how much of TeX's memory you used:
  933 strings out of 482056
- 10897 string characters out of 5937675
- 240666 words of memory out of 5000000
+ 11119 string characters out of 5937675
+ 240630 words of memory out of 5000000
  16674 multiletter control sequences out of 15000+600000
  533407 words of font info for 26 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 30i,0n,25p,211b,38s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,0n,25p,255b,38s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

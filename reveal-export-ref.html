@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Lick the Toad</title>
+<meta name="author" content="Konstantinos Vasilakos"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/serif.css" id="theme"/>
+
+<link rel="stylesheet" href="modifications.css"/>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Lick the Toad</h1><p class="subtitle">A web based interface for displaced agencies in musical interaction.</p>
+<h2 class="author">Konstantinos Vasilakos</h2>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-org47dfe17">Introduction</a></li>
+<li><a href="#/slide-org42516ba">Implementation in a nutshell</a></li>
+<li><a href="#/slide-org8db6bbf">{Music} Networked Systems</a></li>
+<li><a href="#/slide-org4ecaebd">Ltt&rsquo;s implementation</a></li>
+<li><a href="#/slide-org7eea160">Ltt&rsquo;s creative directions</a></li>
+<li><a href="#/slide-orgd2524a3">Current &amp; Ongoing Work</a></li>
+<li><a href="#/slide-orge2e5925">Discussion</a></li>
+<li><a href="#/slide-org93fdcdc">Thanks</a></li>
+<li><a href="#/slide-orgfb06a04">References</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+
+<section>
+<section id="slide-org47dfe17">
+<h2 id="org47dfe17">Introduction</h2>
+<div class="outline-text-2" id="text-org47dfe17">
+</div>
+<div class="slide-footer">Lick the Toad: MIAM Colloquium Jan, 2023.</div>
+</section>
+<section id="slide-org3fb8e58">
+<h3 id="org3fb8e58">Back to the parlour</h3>
+<blockquote >
+<p>
+Imagine a weekend afternoon in a middle class parlour during the second half of the nineteenth century: a soiree, with music performed live by family members gathered around the piano. This scene - once a common occurrence that fostered creative social interaction - became increasingly rare; being displaced by substitute social behaviours arising from technological developments such as sound recording (van der Merwe, 1989), television, etc. Furthermore, as the schism between ‘popular’ and ‘art’ deepened, and the latter demanded increasing levels of virtuosity in order to realise musical ideas, performance of certain strands of contemporary music became nearly impossible for anyone but professionals; disappearing from the ‘soiree’ repertoire.(<a href="#/slide-org3d8ad33">Fischman 2011</a>)
+</p>
+</blockquote>
+<aside class="notes">
+<p>
+Check fullscreen view is on. Thank Sirin and the organizing committee. Mention that he slot assigned is the right one for your project. Introduce the concept of back to the parlour.
+</p>
+
+</aside>
+<div class="slide-footer">Lick the Toad: MIAM Colloquium Jan, 2023.</div>
+</section>
+<section id="slide-orgfa7573b">
+<h3 id="orgfa7573b">Bridging the audience agency in musical interaction</h3>
+<p>
+Ltt is a web interface designed for bridging the gap between performer(s) and audience, allowing former and latter to engage interactively. (<a href="#/slide-orgd921455">Vasilakos 2022</a>) (<a href="#/slide-orgfcd24f8">Vasilakos 2021b</a>) (<a href="#/slide-orgf2e1d59">Vasilakos 2021a</a>)
+</p>
+<div class="slide-footer">Lick the Toad: MIAM Colloquium Jan, 2023.</div>
+</section>
+</section>
+<section>
+<section id="slide-org42516ba">
+<h2 id="org42516ba">Implementation in a nutshell</h2>
+<ol>
+<li class="fragment appear">Real time communication using Web Sockets (real time communication in browsers).</li>
+<li class="fragment appear">Sonifications on users&rsquo; devices using Markov Chain fed by a Neural Network (<a href="#/slide-org83f75ff">Shanging Cai and Nielsen 2020</a>) (using regression).</li>
+<li class="fragment appear">OSC communication with various synthesis environments: MaxMSP, SuperCollider, Pure Data, etc.</li>
+
+</ol>
+
+<div class="slide-footer">Lick the Toad: MIAM Colloquium Jan, 2023.</div>
+</section>
+</section>
+<section>
+<section id="slide-org8db6bbf">
+<h2 id="org8db6bbf">{Music} Networked Systems</h2>
+<div class="outline-text-2" id="text-org8db6bbf">
+</div>
+<div class="slide-footer">Lick the Toad: MIAM Colloquium Jan, 2023.</div>
+</section>
+<section id="slide-org6ccd33b">
+<h3 id="org6ccd33b">Looking Back</h3>
+
+<div id="org030ebf8" class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Telharmonium_-_Scientific_American_1907_%28zoomed_400%25%2C_brightened%29.jpg" alt="Telharmonium_-_Scientific_American_1907_%28zoomed_400%25%2C_brightened%29.jpg" width="35%" align="center" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Unknown author - The World&rsquo;s Work, June 1906, vol. XII, no. II, Public Domain.</p>
+</div>
+
+<aside class="notes">
+<p>
+To understand networked music system first a paraller maybe drawn with other examples of primitive distributed systems in music making. In 1895 Thaddeus Cahill submitted his first patent for the Telharmonium, influenced by other similar creations of the time in Europe and beyond (<a href="#/slide-org2f62a66">Manning 2004</a>). What was common ground for these all was the idea of using modern available tellecommunications, to distribute live music electrically and most important, remotely, displaced from the actual site of the music performance.
+</p>
+
+</aside>
+
+<div class="slide-footer">Lick the Toad: MIAM Colloquium Jan, 2023.</div>
+</section>
+<section id="slide-orgf89e384">
+<h3 id="orgf89e384">Influences</h3>
+<p>
+“The Art of and Apparatus for Generating and Distributing Music Electrically”.<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> (<a href="#/slide-org54ffe23">Crab 2013</a>)
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> Cahill&rsquo;s Telharmonium Precursors.</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Cahill</th>
+<th scope="col" class="org-left">Telharmonium</th>
+<th scope="col" class="org-right">1895/97</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Puskás</td>
+<td class="org-left">Telefonhírmondó</td>
+<td class="org-right">1893</td>
+</tr>
+
+<tr>
+<td class="org-left">Gray</td>
+<td class="org-left">Musical Telegraph</td>
+<td class="org-right">1874</td>
+</tr>
+
+<tr>
+<td class="org-left">Ader</td>
+<td class="org-left">Théâtrophone</td>
+<td class="org-right">1881</td>
+</tr>
+
+<tr>
+<td class="org-left">Soemering</td>
+<td class="org-left">n/a</td>
+<td class="org-right">1809</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<div class="slide-footer">Lick the Toad: MIAM Colloquium Jan, 2023.</div>
+</section>
+<section id="slide-org8a5b96c">
+<h3 id="org8a5b96c">Looking Forward</h3>
+<p>
+Networked Music Systems (<a href="#/slide-org5a492db">Collins and Escrivan Rincón 2011</a>)
+</p>
+
+<p>
+Some works by the author in this field:
+</p>
+<ul>
+<li><a href="https://serkansevilgen.com/docs/01_ICLC_2021_Sevilgen_Vasilakos_Wilson.pdf">BEER Pea Stew: Recalibrated</a> (Wilson, Vasilakos, Lorway, Margetson, Yeung).</li>
+<li><p>
+<a href="https://serkansevilgen.com/docs/01_ICLC_2021_Sevilgen_Vasilakos_Wilson.pdf">ICE: Symphony in Blue 2.0</a> Based on Kamran Ince&rsquo;s initial work (Vasilakos, Sevilgen, Dagdeviren, Wilson).
+</p>
+
+<aside class="notes">
+<p>
+Slightly more recent takes could related with Network Music. Therefore, modern technology apparatus and networking was always in the forefront of pioneering electronic music.
+</p>
+
+</aside></li>
+
+</ul>
+
+<div class="slide-footer">Lick the Toad: MIAM Colloquium Jan, 2023.</div>
+</section>
+</section>
+<section>
+<section id="slide-org4ecaebd">
+<h2 id="org4ecaebd">Ltt&rsquo;s implementation</h2>
+<ol>
+<li class="fragment appear">Collection of training data</li>
+<li class="fragment appear">Training</li>
+<li class="fragment appear"><p>
+Vizualization of regression&rsquo;s values &ldquo;<i>Data:</i>&rdquo;
+</p>
+
+<div id="orgf442408" class="figure">
+<p><img src="https://media.giphy.com/media/o7NKhab3HqG4tgVHpr/giphy.gif" alt="giphy.gif" width="80%" align="center" />
+</p>
+<p><span class="figure-number">Figure 2: </span>Ltt&rsquo;s regression values.</p>
+</div></li>
+
+</ol>
+
+<aside class="notes">
+<p>
+A client allows to train a model in a web browser and trigger predictions based on a regression algorithm. Once the training process is done the system offers a visualization of the output values. The pitch of the patterns is based on a Markov chain module which is  generating predictions based on the neural network regression output values. At the same time, the client is able to send this data to another clients &ldquo;listening&rdquo; for incoming OSC messages (e.g., SuperCollider).
+</p>
+
+</aside>
+<div class="slide-footer">Lick the Toad: MIAM Colloquium Jan, 2023.</div>
+</section>
+</section>
+<section>
+<section id="slide-org7eea160">
+<h2 id="org7eea160">Ltt&rsquo;s creative directions</h2>
+<div class="outline-text-2" id="text-org7eea160">
+</div>
+<div class="slide-footer">Lick the Toad: MIAM Colloquium Jan, 2023.</div>
+</section>
+<section id="slide-orgdf279ea">
+<h3 id="orgdf279ea">Creative Routes</h3>
+<p>
+It can be used in the following contexts:
+</p>
+<ol>
+<li class="fragment appear">Sound Installation</li>
+<li class="fragment appear">System for live coding</li>
+
+</ol>
+
+<aside class="notes">
+<ul>
+<li>allowing bystanders to engage into collective sonifications.</li>
+<li>expanding into other sound synthesis using bystanders&rsquo; interactive data using live coding techniques or mapped into other synthesis module.</li>
+
+</ul>
+
+</aside>
+
+<div class="slide-footer">Lick the Toad: MIAM Colloquium Jan, 2023.</div>
+</section>
+<section id="slide-orgf03d920">
+<h3 id="orgf03d920">Installation</h3>
+
+<div id="org7460eed" class="figure">
+<p><img src="./img/sonified_image.jpg" alt="sonified_image.jpg" width="75%" align="center" />
+</p>
+<p><span class="figure-number">Figure 1: </span>On-site installation: Arter Sonified 2022.</p>
+</div>
+
+<aside class="notes">
+<p>
+Ltt has been used as a standalone app for collective sonifications of bystanders and remote participants but since then it has taken many spins including a real-time chat engine amongst peers. That gives a large amount of freedom, as the use of raw data is an unbiased way and agnostic regarding the sound genration, that means, it can be mapped to an unlimited interpretations of sound events using arbitrary synthesis techniques.
+</p>
+
+</aside>
+
+<div class="slide-footer">Lick the Toad: MIAM Colloquium Jan, 2023.</div>
+</section>
+<section id="slide-org6c0a0dd">
+<h3 id="org6c0a0dd">Live Coding: what now?</h3>
+<p>
+In Live Coding performances (<a href="#/slide-orge0c773b">Blackwell et al. 2022</a>), there is always the question of how a coder is taking their decisions while changing the code on the fly or when is the right time to act upon, see &ldquo;kairotic coding&rdquo;. (<a href="#/slide-orgf4dd575">Cocker 2018</a>)
+</p>
+
+<aside class="notes">
+<p>
+Live coding is a performance paradigm using dynamic programming to build software in real time as a means to improvise with running algorithms, this somehow has been introducing obscurity  as it uses the act of programming, which may be seen as an esoteric form of expression for the wide audiences, however, this obscurity is not anew in other forms of pioneering electronic music  making especially with digital studio techniques that largely remaining behind the veil for the audience. That is to say, not only in the practical level, but also in the philosophical, for example, the act of deliberately detaching the sound from its source as a a form of compositional expression and thus, enabling the act of reduced listening in Acousmatic Music, which still remains the basic concept behind this genre. One way to tackle this issue that ltt took into consideration is the idea of sharing audiences data with the performer while improvising, and thus assigning to the audience a more dynamic role during improvisation.
+</p>
+
+</aside>
+
+<div class="slide-footer">Lick the Toad: MIAM Colloquium Jan, 2023.</div>
+</section>
+</section>
+<section>
+<section id="slide-orgd2524a3">
+<h2 id="orgd2524a3">Current &amp; Ongoing Work</h2>
+<p>
+A study on live coding using ltt and standard and/or non-standard synthesis techniques, using Xenakis&rsquo; fuzzy (probabilistic) methods. (<a href="#/slide-org5667aa3">Fielder 2016</a>) (<a href="#/slide-org72b5c58">Collins 2011</a>) (<a href="#/slide-org80c8a1b">Ariza 2009</a>) (<a href="#/slide-orgd77e38a">Luque 2006</a>)
+</p>
+
+<blockquote >
+<p>
+[T]he amplitude and/or the time of the sound signal can be ruled by sieves. The subtle symmetries thus created should open a new field for exploration. (<a href="#/slide-orgd77e38a">Luque 2006</a>)
+</p>
+</blockquote>
+
+<p>
+<a href="https://youtube.com/watch?v=BxsvtHtmmAg?t=162"><i>play</i></a>
+</p>
+
+<div class="slide-footer">Lick the Toad: MIAM Colloquium Jan, 2023.</div>
+</section>
+<section id="slide-orgc622676">
+<h3 id="orgc622676">An overview of Stochastic Synthesis</h3>
+<blockquote >
+<p>
+Term first used by Swiss 18th-cent. mathematician Bernoulli regarding mathematical laws of probability. Applied by Xenakis to music procedures whereby overall sound contours are determined but inner details are left to chance or worked out mathematically by composer or by computer. (<a href="#/slide-org41e0dab">Kennedy 1996</a>)
+</p>
+</blockquote>
+
+<div class="slide-footer">Lick the Toad: MIAM Colloquium Jan, 2023.</div>
+</section>
+<section id="slide-org52f370a">
+<h4 id="org52f370a">DSS - Dynamic Stochastic Synthesis Endeavor of LTT</h4>
+
+<div id="org616079c" class="figure">
+<p><img src="https://www.researchgate.net/profile/Andrew-Brown-91/publication/27472759/figure/fig1/AS:310071025258496@1450938101216/One-cycle-of-a-stochastic-synthesis-wave.png" alt="One-cycle-of-a-stochastic-synthesis-wave.png" width="50%" align="center" />
+</p>
+<p><span class="figure-number">Figure 1: </span>One cycle of a stochastic synthesis wave.</p>
+</div>
+
+<aside class="notes">
+<p>
+Dynamic Stochastic Synthesis (DSS) - (is often falsely confused with Xenakis&rsquo; GENDYN algorithm [/Generation Dynamique/]). This technique is implemented by modulating sets of breakpoints of a waveform, that includes,  amplitude and durations based on stochastically varied values based on probabilistic distributions, e.g., uniform, Gaussian, Poisson) in real time (<a href="#/slide-orgd77e38a">Luque 2006</a>) known as random walks. This unique to computers non standard standard synthesis technique was musically deployed by Iannis Xenakis which he used to compose works, such as Polytope de Cluny and Legende D &rsquo;Eer. Which not only paved the way for new compositional field but it created a new reference for noise music.
+</p>
+
+</aside>
+
+<div class="slide-footer">Lick the Toad: MIAM Colloquium Jan, 2023.</div>
+</section>
+<section id="slide-org207db93">
+<h4 id="org207db93">Sound Example</h4>
+<div class="org-src-container">
+
+<pre  class="src src-sclang"   1|7><code trim>
+
+[<span style="color: #c678dd;">nil</span>].choose;&#8203;
+</code></pre>
+</div>
+
+<p>
+<a href="https://youtube.com/watch?v=IrGk0yrfbOY?t=145"><i>play</i></a>
+</p>
+
+<div class="slide-footer">Lick the Toad: MIAM Colloquium Jan, 2023.</div>
+</section>
+</section>
+<section>
+<section id="slide-orge2e5925">
+<h2 id="orge2e5925">Discussion</h2>
+<p>
+While ltt serves both as a standalone and live coding tool, it arguably allows for a greater coherence amongst peers on live performance. Similar to the concept of &ldquo;back to the parlour&rdquo; (Fischman, 2011) where members of the audience are able to enact an impromptu improvisation.
+</p>
+
+<p>
+Thank you for listening&#x2026;
+</p>
+
+<aside class="notes">
+<p>
+At the same time ltt remains agnostic on the sound output, when used for live performance, which allows for a great scale of exploration on various synthesis approaches depending on the idiomatic preferences of the  performer.
+</p>
+
+</aside>
+<div class="slide-footer">Lick the Toad: MIAM Colloquium Jan, 2023.</div>
+</section>
+</section>
+<section>
+<section id="slide-org93fdcdc">
+<h2 id="org93fdcdc">Thanks</h2>
+<p>
+Courtesy to the majestic Org mode
+</p>
+
+<div id="org9aba16b" class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Org-mode-unicorn.svg" alt="Org-mode-unicorn.svg" class="org-svg" width="15%" align="center" />
+</p>
+</div>
+
+<p>
+&#x2026;and the powerful SuperCollider
+</p>
+
+<div id="org7548548" class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/SuperCollider_logo.svg" alt="SuperCollider_logo.svg" class="org-svg" width="15%" align="center" />
+</p>
+</div>
+
+<div class="slide-footer">Lick the Toad: MIAM Colloquium Jan, 2023.</div>
+</section>
+</section>
+<section>
+<section id="slide-orgfb06a04">
+<h2 id="orgfb06a04">References</h2>
+<p>
+<a id="org80c8a1b"></a>Ariza, Christopher. 2009. “Sonifying Sieves: Synthesis and Signal Processing Application of the Xenakis Sieve with Python and Csound.”
+</p>
+
+<p>
+<a id="orge0c773b"></a>Blackwell, Alan F., Emma Cocker, Geoff Cox, Alex McLean, and Thor Magnusson. 2022. <i>Live Coding: A User’s Manual</i>. Software Studies. Cambridge, Massachusetts: The MIT Press.
+</p>
+
+<p>
+<a id="orgf4dd575"></a>Cocker, Emma. 2018. “What Now, What next— Kairotic Coding and the Unfolding Future Seized.” <i>Digital Creativity</i> 29 (1): 82–95. doi:<a href="https://doi.org/10.1080/14626268.2017.1419978">10.1080/14626268.2017.1419978</a>.
+</p>
+
+<p>
+<a id="org72b5c58"></a>Collins, Nick. 2011. “Implementing Stochastic Synthesis for SuperCollider and iPhone.”
+</p>
+
+</section>
+<section id="slide-orgfb06a04-split">
+
+<h2>References</h2>
+
+<p>
+<a id="org5a492db"></a>Collins, Nick, and Julio d’ Escrivan Rincón. 2011. <i>The Cambridge companion to electronic music</i>. Cambridge: Cambridge University Press. <a href="http://dx.doi.org/10.1017/CCOL9780521868617">http://dx.doi.org/10.1017/CCOL9780521868617</a>.
+</p>
+
+
+<p>
+<a id="org54ffe23"></a>Crab, Simon. 2013. “The “Telharmonium’ or “Dynamophone’ Thaddeus Cahill, USA 1897.” <i>120 Years of Electronic Music</i>. <a href="https://120years.net/wordpress/the-telharmonium-thaddeus-cahill-usa-1897/">https://120years.net/wordpress/the-telharmonium-thaddeus-cahill-usa-1897/</a>.
+</p>
+
+<p>
+<a id="org5667aa3"></a>Fielder, Jon. 2016. “Creating Pitch Structures with Sieves.” Blog. <i>KLANG - New Music On The Fringe</i>. <a href="http://klangnewmusic.weebly.com/direct-sound/creating-pitch-structures-with-sieves">http://klangnewmusic.weebly.com/direct-sound/creating-pitch-structures-with-sieves</a>.
+</p>
+
+</section>
+<section id="slide-orgfb06a04-split">
+
+<h2>References</h2>
+
+<p>
+<a id="org3d8ad33"></a>Fischman, Rajmil. 2011. “Back to the Parlour.” <i>Sonic Ideas – Ideas Sónicas</i> 2: 53–66. <a href="https://en.cmmas.com/vs19">https://en.cmmas.com/vs19</a>.
+</p>
+
+<p>
+<a id="org41e0dab"></a>Kennedy, Michael. 1996. “Stochastic.” <i>The Concise Dictionary of Music</i>. Oxford: Oxford University Press. <a href="https://www.oxfordreference.com/display/10.1093/acref/9780199578108.001.0001/acref-9780199578108-e-8719;jsessionid=DC77F14831B55FDA1E507BBD763D2677">https://www.oxfordreference.com/display/10.1093/acref/9780199578108.001.0001/acref-9780199578108-e-8719;jsessionid=DC77F14831B55FDA1E507BBD763D2677</a>.
+</p>
+
+<p>
+<a id="orgd77e38a"></a>Luque, Sergio. 2006. “Stochastic Synthesis: Origins and Extensions.” The Netherlands: Institute of Sonology, Royal Conservatory.
+</p>
+
+
+<p>
+<a id="org2f62a66"></a>Manning, Peter. 2004. <i>Electronic and Computer Music</i>. Rev. and expanded ed. Oxford ; New York: Oxford University Press.
+</p>
+
+</section>
+<section id="slide-orgfb06a04-split">
+
+<h2>References</h2>
+
+<p>
+<a id="org83f75ff"></a>Shanging Cai, Stanley Bileschi, and Eric D. Nielsen. 2020. “Chapter 1. Deep Learning and JavaScript · Deep Learning with JavaScript: Neural Networks in TensorFlow.Js –- Livebook.Manning.Com.” eBook. <a href="https://livebook.manning.com/book/deep-learning-with-javascript/chapter-1/1">https://livebook.manning.com/book/deep-learning-with-javascript/chapter-1/1</a>.
+</p>
+
+<p>
+<a id="orgf2e1d59"></a>Vasilakos, Konstantinos. 2021a. “Konstantinos Vasilakos Showcase Lick The Toad NIME 2021.” In <i>NIME 2021</i>. Shanghai, China: PubPub. doi:<a href="https://doi.org/10.21428/92fbeb44.974a1648">10.21428/92fbeb44.974a1648</a>.
+</p>
+
+</section>
+<section id="slide-orgfb06a04-split">
+
+<h2>References</h2>
+
+<p>
+<a id="orgfcd24f8"></a>———. 2021b. “Lick the Toad: A Web-Based Interface for Collective Sonification.” In <i>Anais Do XVIII Simpósio Brasileiro de Computação Musical (SBCM 2021)</i>, 178–88. Brasil: Sociedade Brasileira de Computação - SBC. doi:<a href="https://doi.org/10.5753/sbcm.2021.19444">10.5753/sbcm.2021.19444</a>.
+</p>
+
+<p>
+<a id="orgd921455"></a>———. 2022. “A Networked Hybrid Interface for Audience Sonification and Machine Learning.” <i>Revista Vórtex</i> 10 (1). doi:<a href="https://doi.org/10.33871/23179937.2022.10.1.4695">10.33871/23179937.2022.10.1.4695</a>.
+</p>
+<div class="slide-footer">Lick the Toad: MIAM Colloquium Jan, 2023.</div>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom/zoom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js"></script>
+
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+plugins: [RevealMarkdown, RevealZoom, RevealNotes]
+});
+
+</script>
+</body>
+</html>

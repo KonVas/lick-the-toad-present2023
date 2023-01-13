@@ -9,7 +9,6 @@
 #+REVEAL_SLIDE_FOOTER: Lick the Toad: MIAM Colloquium Jan, 2023.
 :END:
 
-
 #+Title: Lick the Toad
 #+SUBTITLE: A web based interface for displaced agencies in musical interaction.
 #+Author: Konstantinos Vasilakos
@@ -17,29 +16,28 @@
 * Introduction
 ** Back to the parlour
 #+BEGIN_QUOTE
-Imagine a weekend afternoon in a middle class parlour during the second half of the nineteenth century: a soiree, with music performed live by family members gathered around the piano. This scene - once a common occurrence that fostered creative social interaction - became increasingly rare; being displaced by substitute social behaviours arising from technological developments such as sound recording (van der Merwe, 1989), television, etc. Furthermore, as the schism between ‘popular’ and ‘art’ deepened, and the latter demanded increasing levels of virtuosity in order to realise musical ideas, performance of certain strands of contemporary music became nearly impossible for anyone but professionals; disappearing from the ‘soiree’ repertoire.(Fischman, 2011)
+Imagine a weekend afternoon in a middle class parlour during the second half of the nineteenth century: a soiree, with music performed live by family members gathered around the piano. This scene - once a common occurrence that fostered creative social interaction - became increasingly rare; being displaced by substitute social behaviours arising from technological developments such as sound recording (van der Merwe, 1989), television, etc. Furthermore, as the schism between ‘popular’ and ‘art’ deepened, and the latter demanded increasing levels of virtuosity in order to realise musical ideas, performance of certain strands of contemporary music became nearly impossible for anyone but professionals; disappearing from the ‘soiree’ repertoire.[[cite:&Fischman_Back_to_the_parlour_2011]]
 #+END_QUOTE
 ** Bridging the audience agency in musical interaction
-Ltt is a web interface designed for bridging the gap between performer(s) and audience, allowing former and latter to engage interactively.
+Ltt is a web interface designed for bridging the gap between performer(s) and audience, allowing former and latter to engage interactively. [[cite:&vasilakos_networked_2022-1]] [[cite:&vasilakos_lick_2021-1]] [[cite:&vasilakos_konstantinos_2021-4]]
 * Implementation notes
 #+ATTR_REVEAL: :frag (appear)
 1) Real time communication using web sockets[fn:1]
-2) Sonifications on users' devices using Markov Chain instructed by a Neural Network (regression algorithm).
+2) Sonifications on users' devices using Markov Chain instructed by a Neural Network [[cite:&manning_Deep_Learning_JS]] (regression algorithm).
 3) OSC communication with: MaxMSP, SuperCollider, Pure Data, etc.
 
 * Networked systems
 ** Looking Back
+#+CAPTION: Unknown author - The World's Work, June 1906, vol. XII, no. II, Public Domain.
 #+ATTR_HTML: :width 35% :align center
 https://upload.wikimedia.org/wikipedia/commons/0/00/Telharmonium_-_Scientific_American_1907_%28zoomed_400%25%2C_brightened%29.jpg
 
-[[https://commons.wikimedia.org/w/index.php?curid=112285881/][Unknown author - The World's Work, June 1906, vol. XII, no. II, Public Domain]]
-
 #+BEGIN_NOTES
-To understand networked music system first a paraller maybe drawn with other examples of primitive distributed systems in music making. In 1895 Thaddeus Cahill submitted his first patent for the Telharmonium, influenced by other similar creations of the time in Europe and beyond. What was common ground for these all was the idea of using modern available tellecommunications, to distribute live music electrically and most important, remotely, displaced from the actual site of the music performance. Therefore, modern technology apparatus and implicit networking was always in the forefront of pioneering music.
+To understand networked music system first a paraller maybe drawn with other examples of primitive distributed systems in music making. In 1895 Thaddeus Cahill submitted his first patent for the Telharmonium, influenced by other similar creations of the time in Europe and beyond [[cite:&manning_electronic_2004]]. What was common ground for these all was the idea of using modern available tellecommunications, to distribute live music electrically and most important, remotely, displaced from the actual site of the music performance. Therefore, modern technology apparatus and implicit networking was always in the forefront of pioneering music.
 #+END_NOTES
 
 ** Influences
-“The Art of and Apparatus for Generating and Distributing Music Electrically”.[fn:3] (Crab, 2013)
+“The Art of and Apparatus for Generating and Distributing Music Electrically”.[fn:3] [[cite:&crab_telharmonium_2013]]
 #+NAME: Table_Crab_Telharmonium
 | Cahill    | Telharmonium      | 1895/97 |
 |-----------+-------------------+---------|
@@ -51,47 +49,87 @@ To understand networked music system first a paraller maybe drawn with other exa
 
 
 ** Looking Forward
-Slightly more recent takes, on this, Networked Music Systems (Collins, N., & Escrivan Rincón, J. d. 2011).
+ Networked Music Systems [[cite:&collins_cambridge_2011]]
 
 Some works by the author in this field:
 - [[https://serkansevilgen.com/docs/01_ICLC_2021_Sevilgen_Vasilakos_Wilson.pdf][BEER Pea Stew: Recalibrated]] (Wilson, Vasilakos, Lorway, Margetson, Yeung).
-- [[https://serkansevilgen.com/docs/01_ICLC_2021_Sevilgen_Vasilakos_Wilson.pdf][ICE: Symphony in Blue 2.0]] Based on Kamran Ince's initial work (Vasilakos, Sevilgen, Dagdeviren, Wilson)
+- [[https://serkansevilgen.com/docs/01_ICLC_2021_Sevilgen_Vasilakos_Wilson.pdf][ICE: Symphony in Blue 2.0]] Based on Kamran Ince's initial work (Vasilakos, Sevilgen, Dagdeviren, Wilson).
+
+ #+BEGIN_NOTES
+Slightly more recent takes, on this...
+#+END_NOTES
 
 * Ltt: ML in the browser
-#+ATTR_HTML: :width 25% :align center
+#+CAPTION: Regression Value detection in LTT.
+#+ATTR_HTML: :width 75% :align center
 https://media.giphy.com/media/o7NKhab3HqG4tgVHpr/giphy.gif
 
 #+BEGIN_NOTES
 A client allows to train a model in a web browser and trigger predictions based on a regression algorithm. Once the training process is done the system offers a visualization of the output values. The pitch of the patterns is based on a Markov chain module which is  generating predictions based on the neural network regression output values. At the same time, the client is able to send this data to another clients "listening" for incoming OSC messages (e.g., SuperCollider).
 #+END_NOTES
 * Ltt's creative directions
-:PROPERTIES:
-:reveal_background: img/sonified_image.jpg
-:reveal_background_size: 75%
-:reveal_background_trans: slide
-:reveal_background_opacity: 0.99
-:END:
+#+CAPTION: Ltt as onsite installation. Arter Sonified 2022.
+#+ATTR_HTML: :width 75% :align center
+[[./img/sonified_image.jpg]]
 
 #+BEGIN_NOTES
-Ltt has been used as a standalone app for collective sonifications of bystanders and remote participants but since then it has taken many spins including a real time chat engine amongst peers.
+Ltt has been used as a standalone app for collective sonifications of bystanders and remote participants but since then it has taken many spins including a real-time chat engine amongst peers. That gives a large amount of freedom, as the use of raw data is an unbiased way and agnostic regarding the sound genration, that means, it can be mapped to an unlimited interpretations of sound events using arbitrary synthesis techniques.
 #+END_NOTES
 
 ** Live Coding: what now?
-In live coding performances, there is always the question of how a coder is taking their decisions while changing the code on the fly, described also as "kairotic coding". (Cocker, E. 2018).
 
-*** Ongoing Work
-A study on live coding using ltt and stochastic processes[fn:2] in SuperCollider's JITLib.
-#+ATTR_REVEAL: :code_attribs
+In live coding performances [[cite:&blackwell_live_2022]], there is always the question of how a coder is taking their decisions while changing the code on the fly, described also as "kairotic coding". [[cite:&cocker_what_2018]]
+
+#+BEGIN_NOTES
+Live coding is a performance paradigm using dynamic programming to build software in real time as a means to improvise with running algorithms, this somehow has been introducing obscurity  as it uses the act of programming, which may be seen as an esoteric form of expression for the wide audiences, however, this obscurity is not anew in other forms of pioneering electronic music  making especially with digital studio techniques that largely remaining behind the veil for the audience. That is to say, not only in the practical level, but also in the philosophical, for example, the act of deliberately detaching the sound from its source as a a form of compositional expression and thus, enabling the act of reduced listening in Acousmatic Music, which still remains the basic concept behind this genre. One way to tackle this issue that ltt took into consideration is the idea of sharing audiences data with the performer while improvising, and thus assigning to the audience a more dynamic role during improvisation.
+#+END_NOTES
+
+* Current & Ongoing Work
+A study on live coding using ltt and standard and/or non-standard synthesis techniques, using Xenakis' fuzzy (probabilistic) methods.  [[cite:&fielder_sieves_2016]]  [[cite:&collins_stochastic_supercollider]] cite:ariza_sonifying_2009 [[cite:&luque_stochastic_2006]]
+
+#+BEGIN_QUOTE
+[T]he amplitude and/or the time of the sound signal can be ruled by sieves. The subtle symmetries thus created should open a new field for exploration.  [[cite:&luque_stochastic_2006]]
+#+BEGIN_QUOTE
+#+END_QUOTE
+
+- [[youtube:BxsvtHtmmAg?t=162][play]]
+
+** An overview of Stochastic Synthesis
+#+BEGIN_QUOTE
+Term first used by Swiss 18th‐cent. mathematician Bernoulli regarding mathematical laws of probability. Applied by Xenakis to music procedures whereby overall sound contours are determined but inner details are left to chance or worked out mathematically by composer or by computer.
+#+END_QUOTE
+[[cite:&kennedy_stochastic_1996]]
+
+*** DSS - Dynamic Stochastic Synthesis Endeavor of LTT
+#+CAPTION: One cycle of a stochastic synthesis wave.
+#+ATTR_HTML: :width 35% :align center
+https://www.researchgate.net/profile/Andrew-Brown-91/publication/27472759/figure/fig1/AS:310071025258496@1450938101216/One-cycle-of-a-stochastic-synthesis-wave.png
+
+#+BEGIN_NOTES
+Dynamic Stochastic Synthesis (DSS) - (is often falsely confused with Xenakis' GENDYN algorithm [_Generation Dynamique_]). This technique is implemented by modulating sets of breakpoints of a waveform, that includes,  amplitude and durations based on stochastically varied values based on probabilistic distributions, e.g., uniform, Gaussian, Poisson) in real time [[cite:&luque_stochastic_2006]] known as random walks. This unique to computers non standard standard synthesis technique was musically deployed by Iannis Xenakis which he used to compose works such as Polytope de Cluny and Legende D 'Eer. Which not only paved the way for new compositional field but it created a new reference for noise music.
+#+END_NOTES
+
+*** Sound Example
+#+ATTR_REVEAL: :code_attribs 1|7
 #+BEGIN_SRC sclang
-{
-	[nil].choose;
-}
+
+
+[nil].choose;​
+
+
+
 #+END_SRC
 
-[[youtube:IrGk0yrfbOY][[nil].choose.play;​]]
+[[youtube:IrGk0yrfbOY?t=145][play]]
 
 * Discussion
 While ltt serves both as a standalone and live coding tool, it arguably allows for a greater coherence amongst peers on live performance. Similar to the concept of "back to the parlour" (Fischman, 2011) where members of the audience are able to enact an impromptu improvisation.
+
+Thank you for listening...
+
+#+BEGIN_NOTES
+At the same time ltt remains agnostic on the sound output, when used for live performance, which allows for a great scale of exploration on various synthesis approaches depending on the idiomatic preferences of the  performer.
+#+END_NOTES
 * Thanks
 Courtesy to the majestic Org mode
 #+Attr_html: :width 15% :align center
@@ -103,26 +141,11 @@ https://upload.wikimedia.org/wikipedia/commons/6/60/SuperCollider_logo.svg
 
 * Footnotes
 [fn:3] A [[https://120years.net/wordpress/the-telharmonium-thaddeus-cahill-usa-1897/][new field of electronic musical instruments]] and [[https://artsandculture.google.com/story/iAWRKDY1jD1jKA][electronic musical instruments creation using telegraphy]].
-[fn:2] Stochastic synthesis is coined by Iannis Xenakis, with some of the most famous works [[https://www.youtube.com/watch?v=TNWFITZrvxo&ab_channel=TheHouseofHiddenKnowledge][La Légende d'Eer (1977/78)]] and Gendy system.
 [fn:1] Web sockets is a real time communication mechanism that allow web pages to send and receive data amongst peers.
 
-* Bibliography
-Vasilakos, K. (2022). A Networked Hybrid Interface for Audience Sonification and Machine Learning. Revista Vórtex, 10(1) http://dx.doi.org/10.33871/23179937.2022.10.1.4695
-
-Collins, N. (2015). Live Coding and Machine Listening. In Proceedings of the First International Conference on Live Coding (pp. 8). Leeds, UK.
-
-The Cambridge companion to electronic music. Cambridge: Cambridge University Press.
-
-Fiebrink, R., & Sonami, L. (2020). Reflections on Eight Years of Instrument Creation with Machine Learning. In R. Michon, & F. Schroeder, Proceedings of the International Conference on New Interfaces for Musical Expression (pp. 282–288). Birmingham, UK: Birmingham City University.
-
-Baalman, M. (2020). The machine is learning.
-
-#+REVEAL: split
-
-Amershi, S., Cakmak, M., Knox, W. B., & Kulesza, T. (2014). Power to the People: The Role of Humans in Interactive Machine Learning. AI Magazine, 35(4), 105–120. http://dx.doi.org/10.1609/aimag.v35i4.2513
-
-Crab, S. (2013). The ‘Telharmonium’ or ‘Dynamophone’ Thaddeus Cahill, USA 1897.
-
-Cocker, E. (2018). What now, what next — kairotic coding and the unfolding future seized. Digital Creativity, 29(1), 82–95. http://dx.doi.org/10.1080/14626268.2017.1419978/
-
-Fischman, R. (2011). Back to the parlour. Sonic Ideas – Ideas Sónicas, 3(2): 53–66.
+* References
+:PROPERTIES:
+:CUSTOM_ID: bibliography
+:END:
+bibliographystyle:unsrt
+bibliography:~/Documents/bibliography.bib

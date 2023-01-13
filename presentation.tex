@@ -17,7 +17,7 @@
 \author{Konstantinos Vasilakos}
 \date{\today}
 \title{Lick the Toad\\\medskip
-\large A web based interface for displaced agencies in musical interaction}
+\large A web based interface for displaced agencies in musical interaction.}
 \hypersetup{
  pdfauthor={Konstantinos Vasilakos},
  pdftitle={Lick the Toad},
@@ -34,128 +34,128 @@
 
 
 \section*{Introduction}
-\label{sec:org674f903}
-\section*{Lick the Toad}
-\label{sec:orgda53d64}
-Ltt is a web interface designed for bridging the gap between performer(s) and audience, allowing former and latter to engage interactively.
-
-\section*{Bridging the audience agency in musical interaction}
-\label{sec:orge486533}
-It allows for real time of data interaction between clients and server offering an ideal tool to share data for musical interpretation on the fly.
+\label{sec:org0e01bb0}
 \subsection*{Back to the parlour}
-\label{sec:orgfb38a5d}
+\label{sec:org4f3b557}
 \begin{quote}
-\ldots{} as the schism between ‘popular’ and ‘art’ deepened, and
-the latter demanded increasing levels of virtuosity in order
-to realise musical ideas, performance of certain strands of
-contemporary music became nearly impossible for anyone
-but professionals; disappearing from the ‘soiree’ repertoire.
+Imagine a weekend afternoon in a middle class parlour during the second half of the nineteenth century: a soiree, with music performed live by family members gathered around the piano. This scene - once a common occurrence that fostered creative social interaction - became increasingly rare; being displaced by substitute social behaviours arising from technological developments such as sound recording (van der Merwe, 1989), television, etc. Furthermore, as the schism between ‘popular’ and ‘art’ deepened, and the latter demanded increasing levels of virtuosity in order to realise musical ideas, performance of certain strands of contemporary music became nearly impossible for anyone but professionals; disappearing from the ‘soiree’ repertoire.(\citeprocitem{6}{Fischman 2011})
 \end{quote}
-
-\emph{Fischman, R. (2011). Back to the parlour. Sonic Ideas – Ideas Sónicas, 3(2): 53–66.}
-\subsection*{Some implementation notes:}
-\label{sec:org6d0662a}
+\subsection*{Bridging the audience agency in musical interaction}
+\label{sec:org9e9edd2}
+Ltt is a web interface designed for bridging the gap between performer(s) and audience, allowing former and latter to engage interactively.
+\section*{Implementation notes}
+\label{sec:org38458e5}
 \begin{enumerate}
-\item Real time communication using web sockets\footnote{Web sockets is a real time communication mechanism that allow web pages to send and receive data amongst peers.
-
-\label{bibliographystyle link}
-\bibliographystyle{unsrtnat}
-
-\label{bibliography link}}
-\item Sonifications on users' devices.
+\item Real time communication using web sockets\footnote{Web sockets is a real time communication mechanism that allow web pages to send and receive data amongst peers.}
+\item Sonifications on users' devices using Markov Chain instructed by a Neural Network (regression algorithm).
 \item OSC communication with: MaxMSP, SuperCollider, Pure Data, etc.
 \end{enumerate}
 
-\section*{Background}
-\label{sec:org6619394}
+\section*{Networked systems}
+\label{sec:org96711ab}
+\subsection*{Looking Back}
+\label{sec:org3a9e523}
 \begin{center}
-\includegraphics[width=.9\linewidth]{/Users/konstantinos/.emacs.d/.local/cache/org/persist/ec/6de2c0-fc8e-432e-b79d-c9d8965e7d45-7f1010a6ca72c3902a58faa6f9ff74b9.jpg}
+\includegraphics[width=.9\linewidth]{/Users/konstantinos/.emacs.d/.local/cache/org/persist/47/70f8cf-e59f-4797-a94c-c99c71b2c7c9-7f1010a6ca72c3902a58faa6f9ff74b9.jpg}
 \end{center}
 
-\subsection*{Looking Back}
-\label{sec:org5f416d2}
-“The Art of and Apparatus for Generating and Distributing Music Electrically”.\footnote{A \href{https://120years.net/wordpress/the-telharmonium-thaddeus-cahill-usa-1897/}{new field of electronic musical instruments} and \href{https://artsandculture.google.com/story/iAWRKDY1jD1jKA}{electronic musical instruments creation using telegraphy}.} \ref{Table_Crab_Telharmonium}
+\href{https://commons.wikimedia.org/w/index.php?curid=112285881/}{Unknown author - The World's Work, June 1906, vol. XII, no. II, Public Domain}
+
+\begin{NOTES}
+To understand networked music system first a paraller maybe drawn with other examples of primitive distributed systems in music making. In 1895 Thaddeus Cahill submitted his first patent for the Telharmonium, influenced by other similar creations of the time in Europe and beyond (\citeprocitem{7}{Manning 2004}). What was common ground for these all was the idea of using modern available tellecommunications, to distribute live music electrically and most important, remotely, displaced from the actual site of the music performance. Therefore, modern technology apparatus and implicit networking was always in the forefront of pioneering music.
+\end{NOTES}
+
+\subsection*{Influences}
+\label{sec:org78e2b27}
+“The Art of and Apparatus for Generating and Distributing Music Electrically”.\footnote{A \href{https://120years.net/wordpress/the-telharmonium-thaddeus-cahill-usa-1897/}{new field of electronic musical instruments} and \href{https://artsandculture.google.com/story/iAWRKDY1jD1jKA}{electronic musical instruments creation using telegraphy}.} (\citeprocitem{5}{Crab 2013})
 \begin{table}[htbp]
 \label{Table_Crab_Telharmonium}
 \centering
 \begin{tabular}{llr}
-Name & Instrument & Year\\\empty
+Cahill & Telharmonium & 1895/97\\\empty
 \hline
 Puskás & Telefonhírmondó & 1893\\\empty
-Cahill & Telharmonium & 1895/97\\\empty
 Gray & Musical Telegraph & 1874\\\empty
 Ader & Théâtrophone & 1881\\\empty
 Soemering & n/a & 1809\\\empty
 \end{tabular}
 \end{table}
 
-\emph{Crab, S. (2013). The ‘Telharmonium’ or ‘Dynamophone’ Thaddeus Cahill, USA 1897.}
 
-\begin{NOTES}
-In 1895 Thaddeus Cahill submitted his first patent for the Telharmonium
-By Unknown author - The World's Work, June 1906, vol. XII, no. II, Public Domain, \url{https://commons.wikimedia.org/w/index.php?curid=112285881}
-\end{NOTES}
 
 \subsection*{Looking Forward}
-\label{sec:orgf38e5a6}
-Modern takes using telecom: the networked music paradigm \emph{Collins, N., \& Escrivan Rincón, J. d. (2011). The Cambridge companion to electronic music. Cambridge: Cambridge University Press.}
+\label{sec:org2b7ff5b}
+Slightly more recent takes, on this, Networked Music Systems (\citeprocitem{4}{Collins and Escrivan Rincón 2011})
 
-Previous works by the author in this field:
+Some works by the author in this field:
 \begin{itemize}
 \item \href{https://serkansevilgen.com/docs/01\_ICLC\_2021\_Sevilgen\_Vasilakos\_Wilson.pdf}{BEER Pea Stew: Recalibrated} (Wilson, Vasilakos, Lorway, Margetson, Yeung).
-\item \href{https://serkansevilgen.com/docs/01\_ICLC\_2021\_Sevilgen\_Vasilakos\_Wilson.pdf}{ICE: Symphony in Blue 2.0} \textbf{based on Kamran Ince's initial work} (Vasilakos, Sevilgen, Dagdeviren, Wilson)
+\item \href{https://serkansevilgen.com/docs/01\_ICLC\_2021\_Sevilgen\_Vasilakos\_Wilson.pdf}{ICE: Symphony in Blue 2.0} Based on Kamran Ince's initial work (Vasilakos, Sevilgen, Dagdeviren, Wilson)
 \end{itemize}
 
-\section*{Ltt: machine Learning in the browser}
-\label{sec:orga8d0465}
-\subsection*{Client Collection Data}
-\label{sec:org006e1b7}
-A client allows to train a model in a web browser and triger predictions based on a regression algorithm. Once the training process is done the system offers visualization of the output values. The sound generation is based on a Markov chain module which is generating predictions based on the ml predictions. At the same time the client is able to send these data to other clients ``listening''  for incoming OSC messages.
-\subsection*{Notes on ML in Computer Music and Digital Arts}
-\label{sec:org1672f84}
-For some machine learning in Electronic Music literature as follows:
-\begin{itemize}
-\item Vasilakos, K. (2022). A Networked Hybrid Interface for Audience Sonification and Machine Learning. Revista Vórtex, 10(1) \url{http://dx.doi.org/10.33871/23179937.2022.10.1.4695}
-\item Collins, N. (2015). Live Coding and Machine Listening. In Proceedings of the First International Conference on Live Coding (pp. 8). Leeds, UK.
-\item Fiebrink, R., \& Sonami, L. (2020). Reflections on Eight Years of Instrument Creation with Machine Learning. In R. Michon, \& F. Schroeder, Proceedings of the International Conference on New Interfaces for Musical Expression (pp. 282–288). Birmingham, UK: Birmingham City University.
-\item Baalman, M. (2020). The machine is learning.
-\item Amershi, S., Cakmak, M., Knox, W. B., \& Kulesza, T. (2014). Power to the People: The Role of Humans in Interactive Machine Learning. AI Magazine, 35(4), 105–120. \url{http://dx.doi.org/10.1609/aimag.v35i4.2513}
-\end{itemize}
+\section*{Ltt: ML in the browser}
+\label{sec:org97f803d}
+\url{https://media.giphy.com/media/o7NKhab3HqG4tgVHpr/giphy.gif}
 
+\begin{NOTES}
+A client allows to train a model in a web browser and trigger predictions based on a regression algorithm. Once the training process is done the system offers a visualization of the output values. The pitch of the patterns is based on a Markov chain module which is  generating predictions based on the neural network regression output values. At the same time, the client is able to send this data to another clients ``listening'' for incoming OSC messages (e.g., SuperCollider).
+\end{NOTES}
 \section*{Ltt's creative directions}
-\label{sec:org9aef2df}
+\label{sec:orgebffa98}
 \begin{NOTES}
 Ltt has been used as a standalone app for collective sonifications of bystanders and remote participants but since then it has taken many spins including a real time chat engine amongst peers.
 \end{NOTES}
 
 \subsection*{Live Coding: what now?}
-\label{sec:org5e6861f}
-In live coding performances, there is always the question of how a coder is taking their decisions while changing the code on the fly, described also as ``kairotic coding''. \emph{Cocker, E. (2018). What now, what next — kairotic coding and the unfolding future seized. Digital Creativity, 29(1), 82–95. \url{http://dx.doi.org/10.1080/14626268.2017.1419978}}
+\label{sec:orgc40d63e}
+
+In live coding performances, there is always the question of how a coder is taking their decisions while changing the code on the fly, described also as ``kairotic coding''. (\citeprocitem{2}{Cocker 2018})
+
+\begin{NOTES}
+Live coding is a performance paradigm using dynamic programming to build programs in real time.
+\end{NOTES}
 
 \subsubsection*{Ongoing Work}
-\label{sec:org41313e7}
-A study on live coding using ltt and stochastic processes\footnote{Stochastic synthesis is coined by Iannis Xenakis, with some of the most famous works Legend Air and Gendy system.} in SuperCollider's JITLib.
+\label{sec:orged4d322}
+A study on live coding (\citeprocitem{1}{Blackwell et al. 2022}) using ltt and stochastic processes\footnote{Stochastic synthesis is coined by Iannis Xenakis, with some of the most famous works \href{https://www.youtube.com/watch?v=TNWFITZrvxo\&ab\_channel=TheHouseofHiddenKnowledge}{La Légende d'Eer (1977/78)} and Gendy system.} (\citeprocitem{3}{Collins 2011}) in SuperCollider's JITLib.
 \begin{verbatim}
 {
-	[nil].choose;
+	
 }
 \end{verbatim}
 
-\href{https://youtube.com/watch?v=IrGk0yrfbOY}{[nil]​}
+\href{https://youtube.com/watch?v=IrGk0yrfbOY}{[nil].choose.play;​}
 
-\section*{Discussion (instead of) Conclusion}
-\label{sec:orgad60544}
-While ltt serves both as a standalone and live coding tool, it arguably allows for a greater coherence amongst peers on live performance. Similar to the concept of ``back to the parlour'' where members of the audience are able to enact an impromptu improvisation.
-
+\section*{Discussion}
+\label{sec:org8af8c4a}
+While ltt serves both as a standalone and live coding tool, it arguably allows for a greater coherence amongst peers on live performance. Similar to the concept of ``back to the parlour'' (Fischman, 2011) where members of the audience are able to enact an impromptu improvisation.
 \section*{Thanks}
-\label{sec:org96c2b98}
+\label{sec:org73f80a1}
 Courtesy to the majestic Org mode
 \begin{center}
-\includesvg[width=.9\linewidth]{/Users/konstantinos/.emacs.d/.local/cache/org/persist/60/c86ac0-aa70-4345-b2b7-a3aa1b592a75-b12c0615bd9cca27d21e0c1e4079751a}
+\includesvg[width=.9\linewidth]{/Users/konstantinos/.emacs.d/.local/cache/org/persist/1b/df2a83-9177-44da-8d98-27077b38386d-b12c0615bd9cca27d21e0c1e4079751a}
 \end{center}
 
 \ldots{}and the powerful SuperCollider
 \begin{center}
-\includesvg[width=.9\linewidth]{/Users/konstantinos/.emacs.d/.local/cache/org/persist/82/a01565-1a8b-4360-a7a0-fe1130d7d9bf-d3955a7c00c4fd105e49e34b7c2707cf}
+\includesvg[width=.9\linewidth]{/Users/konstantinos/.emacs.d/.local/cache/org/persist/be/1da88f-bb78-45e0-9999-3de69e948c04-d3955a7c00c4fd105e49e34b7c2707cf}
 \end{center}
+
+\section*{References}
+\label{bibliography}
+\bibliographystyle{unsrt}
+
+\hypertarget{citeproc_bib_item_1}{Blackwell, Alan F., Emma Cocker, Geoff Cox, Alex McLean, and Thor Magnusson. 2022. \textit{Live Coding: A User’s Manual}. Software Studies. Cambridge, Massachusetts: The MIT Press.}
+
+\hypertarget{citeproc_bib_item_2}{Cocker, Emma. 2018. “What Now, What next— Kairotic Coding and the Unfolding Future Seized.” \textit{Digital Creativity} 29 (1): 82–95. doi:\href{https://doi.org/10.1080/14626268.2017.1419978}{10.1080/14626268.2017.1419978}.}
+
+\hypertarget{citeproc_bib_item_3}{Collins, Nick. 2011. “Implementing Stochastic Synthesis for SuperCollider and iPhone.”}
+
+\hypertarget{citeproc_bib_item_4}{Collins, Nick, and Julio d’ Escrivan Rincón. 2011. \textit{The Cambridge companion to electronic music}. Cambridge: Cambridge University Press. \url{http://dx.doi.org/10.1017/CCOL9780521868617}.}
+
+\hypertarget{citeproc_bib_item_5}{Crab, Simon. 2013. “The “Telharmonium’ or “Dynamophone’ Thaddeus Cahill, USA 1897.” \textit{120 Years of Electronic Music}. \url{https://120years.net/wordpress/the-telharmonium-thaddeus-cahill-usa-1897/}.}
+
+\hypertarget{citeproc_bib_item_6}{Fischman, Rajmil. 2011. “Back to the Parlour.” \textit{Sonic Ideas – Ideas Sónicas} 2: 53–66. \url{https://en.cmmas.com/vs19}.}
+
+\hypertarget{citeproc_bib_item_7}{Manning, Peter. 2004. \textit{Electronic and Computer Music}. Rev. and expanded ed. Oxford ; New York: Oxford University Press.}
 \end{document}
